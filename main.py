@@ -146,8 +146,8 @@ def search_django():
             connection.close()
 
 
-schedule.every(10).minutes.do(search_python)
-schedule.every(10).minutes.do(search_django)
+schedule.every(5).minutes.do(search_python)
+schedule.every(5).minutes.do(search_django)
 
 while True:
     schedule.run_pending()
