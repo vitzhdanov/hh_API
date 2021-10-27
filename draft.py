@@ -36,15 +36,16 @@ finally:
 
 
 # params = {
-#     'text': 'Django junior',  # Текст фильтра. В имени должно быть слово "Аналитик"
+#     'text': 'NAME:Python junior',  # Текст фильтра. В имени должно быть слово "Аналитик"
 #     'page': 0,  # Индекс страницы поиска на HH
 #     'per_page': 100,  # Кол-во вакансий на 1 странице
 #     'period': 1,
 #     'experience': "noExperience",
-#     'vacancy_label': 'Хуйх'
+#     # 'requirement': 'Django'
 # }
 # req = requests.get('https://api.hh.ru/vacancies', params)
 # vacancies_list = []
+# print(req.json()['items'])
 # if len(req.json()['items']) > 2:
 #     for o in req.json()['items']:
 #         print(o)
