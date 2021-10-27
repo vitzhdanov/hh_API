@@ -80,7 +80,7 @@ def search_python():
 
 def search_django():
     params = {
-        'text': 'NAME:Django junior',  # Текст фильтра. В имени должно быть слово "Аналитик"
+        'text': 'Django junior',  # Текст фильтра. В имени должно быть слово "Аналитик"
         'page': 0,  # Индекс страницы поиска на HH
         'per_page': 100,  # Кол-во вакансий на 1 странице
         'period': 1,
@@ -117,6 +117,7 @@ def search_django():
                     }
                 )
         db_list = []
+        print(vacancies_list)
         with connection.cursor() as cursor:
             select_command = 'SELECT id FROM vacancies;'
             cursor.execute(select_command)
@@ -135,10 +136,6 @@ def search_django():
                 else:
                     print('Already exists')
             connection.commit()
-        # with connection.cursor() as cursor:
-        #     cursor.execute('DROP TABLE vacancies;')
-        #     print('table pizda')
-        #     connection.commit()
     except Exception as ex:
         print(f'[INFO] {ex}')
         pass
